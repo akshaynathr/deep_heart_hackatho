@@ -178,6 +178,13 @@ def runModel(gymName, plot=False, load=False):
             inputData = "%s/%s.csv" % (DATA_DIR, filename)
             model = runIoThroughNupic(inputData, model, filename, plot, load)
 
+
+def execute(plot=False,load=False):
+     
+    
+    runModel(CSV_NAME, plot=plot, load=load)   
+
+
 if __name__ == "__main__":
     print DESCRIPTION
     plot = False

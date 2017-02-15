@@ -30,11 +30,12 @@ from nupic.algorithms import anomaly_likelihood
 # Try to import matplotlib, but we don't have to.
 try:
     import matplotlib
-    matplotlib.use('TKAgg')
+    matplotlib.use('TkAgg')
     import matplotlib.pyplot as plt
     import matplotlib.gridspec as gridspec
     from matplotlib.dates import date2num, DateFormatter
 except ImportError:
+    print "Error"
     pass
 
 WINDOW = 300
@@ -317,6 +318,7 @@ class NuPICPlotOutput(NuPICOutput):
         self._anomalyGraph.autoscale_view(True, True, True)
 
         plt.draw()
+	plt.pause(0.00000000001)
 
 
 
